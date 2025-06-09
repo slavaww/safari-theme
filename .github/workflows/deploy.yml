@@ -20,6 +20,10 @@ jobs:
 
       - name: Deploy via SSH (rsync)
         run: |
-          rsync -avz --delete --exclude='.git/' \
+          rsync -avz --delete --delete-excluded \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='LICENSE' \
+            --exclude='.gitignore' \
             -e "ssh -o StrictHostKeyChecking=no" \
             ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.REMOTE_THEME_PATH }}
