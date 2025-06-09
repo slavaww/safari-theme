@@ -1,6 +1,7 @@
 <?php
 /**
- * This function for delay Yandex.metrica script 87804253,
+ * This function for delay Yandex.metrica script,
+ * Подключить номер счетчика в кастомайзере!!!
  */
 add_action('wp_footer', function() {
     ?>
@@ -11,16 +12,12 @@ add_action('wp_footer', function() {
             <?php
             // Флаг, что Метрика уже загрузилась. ?>
             var loadedMetrica = false;
-                <?php
-                // Ваш идентификатор сайта в Яндекс.Метрика. ?>
-                const metricaId = 87804253;
+                const metricaId = <?php echo get_theme_mod('ya_metrika', '') ?>;
                 <?php
                 // Переменная для хранения таймера. ?>
                 var timerId;
             <?php
-            // Для бота Яндекса грузим Метрику сразу без "отложки",
-            // чтобы в панели Метрики были зелёные кружочки
-            // при проверке корректности установки счётчика. ?>
+            // Для бота Яндекса грузим Метрику сразу. ?>
             if ( navigator.userAgent.indexOf( 'YandexMetrika' ) > -1 ) {
                 loadMetrica();
             } else {
@@ -48,16 +45,7 @@ add_action('wp_footer', function() {
             }
 
             function loadMetrica( e ) {
-                <?php
-                // Пишем отладку в консоль браузера. ?>
-                // if ( e && e.type ) {
-                //     console.log( 'loggin yandex.metrica', e.type );
-                // } else {
-                //     console.log( 'DOMContentLoaded' );
-                // }
-                <?php
-                // Если флаг загрузки Метрики отмечен,
-                // то ничего более не делаем. ?>
+
                 if ( loadedMetrica ) {
                     return;
                 }
@@ -87,7 +75,7 @@ add_action('wp_footer', function() {
             }
         } )()
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/87804253" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img src="https://mc.yandex.ru/watch/<?php echo get_theme_mod('ya_metrika', '') ?>" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     <?php
 }
