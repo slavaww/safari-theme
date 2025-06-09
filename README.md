@@ -21,3 +21,7 @@ Safari Theme is a clean, modern and visually appealing theme designed for creati
 * HTML/CSS (likely, depending on the repo content)
 * JavaScript (if interactive elements are included)
 * Possibly Sass/LESS for styling
+
+## How to Use
+
+1. Clone the repository: `git clone https://github.com/slavaww/safari-theme.git`
