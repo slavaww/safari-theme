@@ -25,3 +25,5 @@ Safari Theme is a clean, modern and visually appealing theme designed for creati
 ## How to Use
 
 1. Clone the repository: `git clone https://github.com/slavaww/safari-theme.git`
+2. Setup this theme into Wordpress
+3. Customize the theme as needed
