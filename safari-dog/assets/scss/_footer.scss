@@ -1,0 +1,37 @@
+.footer {
+    background-color: $footer-bg-color;
+    padding: 5em 0 2em;
+    .nav {
+        .nav-link {
+            color: $blod-lonk-color;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+    dt {
+        &.address {
+            background: url('/wp-content/themes/safari-dog/assets/images/address.png') top center no-repeat;
+            display: block;
+        }
+        &.phone {
+            background: url('/wp-content/themes/safari-dog/assets/images/phone.png') top center no-repeat;
+            display: block;
+        }
+        &.email {
+            background: url('/wp-content/themes/safari-dog/assets/images/message.png') top center no-repeat;
+        }
+    }
+    .copyright {
+        color: $date-color;
+        font-size: 14px;
+    }
+    & &__hr {
+        height: 2px;
+        margin: 10px auto;
+        color: $date-color;
+        @media screen and (min-width:992px) {
+            display: none
+        }
+    }
+}

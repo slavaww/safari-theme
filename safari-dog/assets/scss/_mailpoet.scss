@@ -1,0 +1,14 @@
+.mailpoet {
+    &_page {
+        margin-top: 10vh;
+        margin-bottom: 20px;
+    }
+    &_title {
+        margin-bottom: 10vmin;
+    }
+    &_page.post-188 {
+        @media (min-width:992px) {
+            min-height: calc(100vh - 635px);
+        }
+    }
+}
