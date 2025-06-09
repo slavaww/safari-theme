@@ -81,6 +81,19 @@ function safari_footer( $wp_customize ) {
             'label'      => __('E-mail', 'safari'),
             'section'    => $section
         ));
+
+        $setting = 'ya_metrika';
+        $wp_customize->add_setting( $setting, array(
+            'default'           => '',
+            'sanitize_callback' => 'sanitize_text_field',
+			'transport'         => $transport
+        ));
+    
+        $wp_customize->add_control( $setting, array(
+            'type'       => 'text',
+            'label'      => __('Yandex metrika number', 'safari'),
+            'section'    => $section
+        ));
     }
 }
 
