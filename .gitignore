@@ -1,0 +1,19 @@
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+
+# All themes
+#
+/twenty*/
+!/safari-dog
+
+/index.php
+
+*/**/.DS_Store
+/**/.DS_Store
+.DS_Store
+/**/*.bak
+
+/logs
+/*.tar.gz
+
+.env
