@@ -3,7 +3,7 @@
  * This function for delay Yandex.metrica script,
  * Подключить номер счетчика в кастомайзере!!!
  */
-add_action('wp_footer', function() {
+add_action('wp_head', function() {
     ?>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
