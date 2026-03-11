@@ -1,0 +1,9 @@
+.error404 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+
+    .safari-index {
+        flex: 1;
+    }
+}
