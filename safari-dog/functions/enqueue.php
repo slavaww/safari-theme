@@ -1,9 +1,9 @@
 <?php
  
- function safari_stili_frontend() {
+ function safari_scripts_frontend() {
     wp_enqueue_style('bootstrap5', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', array(), $ver = '5.3.3');
- 	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css', array(), $ver = 5.7 );
- 	wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/assets/css/main.min.css', array('bootstrap5'), $ver = 0.9 );
+ 	// wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+ 	wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/assets/css/main.min.css', array('bootstrap5'), wp_get_theme()->get( 'Version' ) );
      
     wp_enqueue_script( 'bootstrap5','https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', [], '5.3.3', ['in_footer' => true, 'strategy' => 'defer'] );
 
@@ -14,7 +14,7 @@
         wp_script_add_data( $script, 'strategy', 'defer' );
     }
 }
-add_action( 'wp_enqueue_scripts', 'safari_stili_frontend', 25 );
+add_action( 'wp_enqueue_scripts', 'safari_scripts_frontend', 25 );
 
 
 function add_font_awesome_5_cdn_attributes( $html, $handle ) {
